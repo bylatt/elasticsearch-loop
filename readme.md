@@ -1,5 +1,11 @@
 # Loop'n an es index'
 
+### Run tests
+```
+composer test
+```
+
+### Usage example
 ```php
 use \Elasticsearch\ClientBuilder;
 use \Clozed2u\Elasticsearch\ES16\Looper;
