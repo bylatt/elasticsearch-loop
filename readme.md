@@ -1,6 +1,6 @@
 # Loop'n an es index'
 
-```
+```php
 use \Elasticsearch\ClientBuilder;
 use \Clozed2u\Elasticsearch\ES16\Looper;
 
