@@ -19,6 +19,12 @@ class Looper
   public function setSearchParams($params)
   {
     if (is_array($params)) {
+      $params['search_type'] = isset($params['search_type']) ? $params['search_type'] : 'scan';
+      $params['scroll'] = isset($params['scroll']) ? $params['scroll'] : '5m';
+      $params['size'] = isset($params['size']) ? $params['size'] : 1000;
+      if (!isset($params['index'])) {
+        throw new Exception('Index key require in params');
+      }
       $this->search_params = $params;
       return $this;
     } else {

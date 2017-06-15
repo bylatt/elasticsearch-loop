@@ -37,7 +37,10 @@ class LooperTest extends TestCase
         'query' => [
           'match_all' => []
         ]
-      ]
+      ],
+      'search_type' => 'scan',
+      'scroll' => '5m',
+      'size' => 1000
     ];
     $looper->setSearchParams($search_params);
     $this->assertEquals($looper->search_params, $search_params);
@@ -95,7 +98,10 @@ class LooperTest extends TestCase
         'query' => [
           'match_all' => []
         ]
-      ]
+      ],
+      'search_type' => 'scan',
+      'scroll' => '5m',
+      'size' => 1000
     ]);
     $looper->setCallback(function ($response) { var_dump($response); });
     $this->assertTrue($looper->get());
