@@ -57,7 +57,7 @@ class Looper
         ]);
 
         if (count($docs['hits']['hits']) > 0) {
-          $this->callback($docs);
+          ($this->callback)($docs);
           $scroll_id = $docs['_scroll_id'];
         } else {
           return true;
