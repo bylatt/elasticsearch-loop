@@ -5,6 +5,11 @@
 composer test
 ```
 
+### Install
+```
+composer require clozed2u/elasticsearch-loop
+```
+
 ### Usage example
 ```php
 use \Elasticsearch\ClientBuilder;
